@@ -124,4 +124,18 @@ public class PhotoSessionApp extends Application {
 
         tableView.getColumns().addAll(colDate, colLocation, colSpecies, colDuration);
     }
+
+    /**
+     * Reload table from SessionLog
+     */
+    private void refreshTable() {
+        tableView.getItems().clear();
+        for (Session s : log.getSessions()) {
+            if (s instanceof WildlifeSession) {
+                tableView.getItems().add((WildlifeSession) s);
+            }
+        }
+    }
+
+    
 }
