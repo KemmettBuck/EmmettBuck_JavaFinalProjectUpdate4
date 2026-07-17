@@ -219,7 +219,16 @@ public class PhotoSessionApp extends Application {
 
     /** Clear form after saving */
     private void clearForm() {
-
+        tfDate.clear();
+        tfLocation.clear();
+        tfWeather.clear();
+        ftEquipment.clear();
+        tfDuration.clear();
+        tfSpecies.clear();
+        tfNumber.clear();
+        cbInMotion.setSelected(false);
+        tfShotDesc.clear();
+        taNotes.clear();
     }
 
     /** Screen: search by location */
@@ -253,5 +262,4 @@ public class PhotoSessionApp extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
 }
