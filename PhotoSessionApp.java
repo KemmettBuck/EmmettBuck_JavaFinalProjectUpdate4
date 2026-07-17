@@ -68,5 +68,16 @@ public class PhotoSessionApp extends Application {
         root.setBottom(lblStatus);
         BorderPane.setMargin(lblStatus, new Insets(8));
 
+        // Session Table
+        buildTable();
+
+        // View All screen
+        root.setCenter(buildViewAllScreen());
+
+        // ------ EVENT 1: Add Session Button ------
+        btAdd.setOnAction(e -> root.setCenter(buildAddScreen()));
+
+        
+
     }
 }
