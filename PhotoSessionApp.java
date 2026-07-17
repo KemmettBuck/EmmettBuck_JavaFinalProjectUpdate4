@@ -229,6 +229,23 @@ public class PhotoSessionApp extends Application {
 
         Button btGo = new Button("Search");
         HBox searchBar = new HBox(10);
+        searchBar.getChildren().addAll(new Label("Location keyword:"), tfSearch, btGo);
+        searchBar.setAlignment(Pos.CENTER_LEFT);
+        searchBar.setPadding(new Insets(0, 0, 10, 0));
+
+        pane.setTop(searchBar);
+        pane.setCenter(tableView);
+
+        // ------ EVENT: Filter the tables ------
+        btGo.setOnAction(e -> {
+            tableView.getItems().clear();
+            for (Session s : log.searchByLocation(tfSearch.getText().trim())) {
+                if (s instanceof WildlifeSession) {
+                    tableView.getItems().add((WildlifeSessions) s);
+                }
+            }
+            lblStatus.setText("Found " + tableView.getItems().size() + "matching sessions");
+        });
     }
 
 }
