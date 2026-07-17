@@ -86,5 +86,12 @@ public class PhotoSessionApp extends Application {
             + "sessions");
         });
 
+        // ------ EVENT 3: Search Button ------
+        // search screen
+        btSearch.setOnAction(e -> root.setCenter(buildSearchScreen()));
+
+        // ------ EVENT 4: Statistics Button ------
+        // Display summary statistics
+
     }
 }
