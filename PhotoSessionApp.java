@@ -50,13 +50,23 @@ public class PhotoSessionApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+
         // ------ Toolbar with Nav buttons ------
         Button btAdd        = new Button("Add Session");
         Button btViewAll    = new Button("View All Sessions");
         Button btSearch     = new Button("Search");
         Button btStats      = new Button("Statistics");
 
-        HBox
+        HBox toolbar        = new HBox(10);
+        toolbar.setPadding(new Insets(10));
+        toolbar.setAlignment(Pos.CENTER);
+        toolbar.getChildren().addAll(btAdd, btViewAll, btSearch, btStats);
+
+        // ------ Center area ------
+        BorderPane root = new BorderPane();
+        root.setTop(toolbar);
+        root.setBottom(lblStatus);
+        BorderPane.setMargin(lblStatus, new Insets(8));
 
     }
 }
