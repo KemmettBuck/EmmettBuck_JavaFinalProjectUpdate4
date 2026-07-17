@@ -98,5 +98,10 @@ public class PhotoSessionApp extends Application {
             lblStatus.setText("Session statistics");
         });
 
+        Scene scene = new Scene(root, 750, 520);
+        primaryStage.setTitle("Nature Photography Session Log");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
+    
 }
