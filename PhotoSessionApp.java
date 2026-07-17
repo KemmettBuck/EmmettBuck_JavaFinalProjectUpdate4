@@ -111,6 +111,17 @@ public class PhotoSessionApp extends Application {
         TableColumn<WildlifeSession, String> colDate = new TableColumn<>("Date");
         colDate.setCellValueFactory(new PropertyValueFactory<>("date"));
 
-        
+        TableColumn<WildlifeSession, String> colLocation = new TableColumn<>("Location");
+        colLocation.setCellValueFactory(new PropertyValueFactory<>("location"));
+        colLocation.setPrefWidth(180);
+
+        TableColumn<WildlifeSession, String> colSpecies = new TableColumn<>("Species");
+        colSpecies.setCellValueFactory(new PropertyValueFactory<>("species"));
+        colSpecies.setPrefWidth(140);
+
+        TableColumn<WildlifeSession, Double> colDuration = new TableColumn<>("Hours");
+        colDuration.setCellValueFactory(new PropertyValueFactory<>("duration"));
+
+        tableView.getColumns().addAll(colDate, colLocation, colSpecies, colDuration);
     }
 }
