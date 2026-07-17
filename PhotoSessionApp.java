@@ -103,5 +103,14 @@ public class PhotoSessionApp extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-    
+
+    /**
+     * Build table columns for displaying sessions
+     */
+    private void buildTable() {
+        TableColumn<WildlifeSession, String> colDate = new TableColumn<>("Date");
+        colDate.setCellValueFactory(new PropertyValueFactory<>("date"));
+
+        
+    }
 }
