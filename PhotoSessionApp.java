@@ -213,7 +213,22 @@ public class PhotoSessionApp extends Application {
             lblStatus.setText("Session saved! Total sessions: " + log.getTotalSessions());          
         } 
         catch (NumberFormatException ex) {
-            lblStatus.setText("Error: Duration and Number sighted must be numeric");
+            lblStatus.setText("Error: Duration and Number sighted must be a number");
         }
     }
+
+    /** Clear form after saving */
+    private void clearForm() {
+
+    }
+
+    /** Screen: search by location */
+    private BorderPane buildSearchScreen() {
+        BorderPane pane = new BorderPane();
+        pane.setPadding(new Insets(10));
+
+        Button btGo = new Button("Search");
+        HBox searchBar = new HBox(10);
+    }
+
 }
