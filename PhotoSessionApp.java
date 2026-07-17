@@ -8,7 +8,6 @@
  * Course: Java - Ivy Tech Community College
  * Final Project: Nature Photography Session Log
  */
-import javax.swing.text.TableView;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -83,7 +82,7 @@ public class PhotoSessionApp extends Application {
             refreshTable();
             root.setCenter(buildViewAllScreen());
             lblStatus.setText("Showing all " + log.getTotalSessions()
-            + "sessions");
+            + " sessions");
         });
 
         // ------ EVENT 3: Search Button ------
@@ -190,7 +189,7 @@ public class PhotoSessionApp extends Application {
 
             // error for location, can't be blank
             if (tfLocation.getText().trim().isEmpty()) {
-                lblbStatus.setText("Error: Location required");
+                lblStatus.setText("Error: Location required");
                 return;
             }
 
@@ -222,7 +221,7 @@ public class PhotoSessionApp extends Application {
         tfDate.clear();
         tfLocation.clear();
         tfWeather.clear();
-        ftEquipment.clear();
+        tfEquipment.clear();
         tfDuration.clear();
         tfSpecies.clear();
         tfNumber.clear();
@@ -250,10 +249,10 @@ public class PhotoSessionApp extends Application {
             tableView.getItems().clear();
             for (Session s : log.searchByLocation(tfSearch.getText().trim())) {
                 if (s instanceof WildlifeSession) {
-                    tableView.getItems().add((WildlifeSessions) s);
+                    tableView.getItems().add((WildlifeSession) s);
                 }
             }
-            lblStatus.setText("Found " + tableView.getItems().size() + "matching sessions");
+            lblStatus.setText("Found " + tableView.getItems().size() + " matching sessions");
         });
 
         return pane;
