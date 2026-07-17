@@ -77,7 +77,14 @@ public class PhotoSessionApp extends Application {
         // ------ EVENT 1: Add Session Button ------
         btAdd.setOnAction(e -> root.setCenter(buildAddScreen()));
 
-        
+        // ------ EVENT 2: View All Button ------
+        // Refresh, show table of all sessions
+        btViewAll.setOnAction(e -> {
+            refreshTable();
+            root.setCenter(buildViewAllScreen());
+            lblStatus.setText("Showing all " + log.getTotalSessions()
+            + "sessions");
+        });
 
     }
 }
