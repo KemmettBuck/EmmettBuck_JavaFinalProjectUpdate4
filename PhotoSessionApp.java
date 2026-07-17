@@ -144,4 +144,14 @@ public class PhotoSessionApp extends Application {
         pane.setCenter(tableView);
         return pane;
     }
+
+    /** Screen: Add Session form */
+    private GridPane buildAddScreen() {
+        GridPane grid = new GridPane();
+        grid.setHgap(10);
+        grid.setVgap(8);
+        grid.setPadding(new Insets(10));
+
+        
+    }
 }
