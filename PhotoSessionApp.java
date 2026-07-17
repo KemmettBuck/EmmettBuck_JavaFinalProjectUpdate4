@@ -246,6 +246,12 @@ public class PhotoSessionApp extends Application {
             }
             lblStatus.setText("Found " + tableView.getItems().size() + "matching sessions");
         });
+
+        return pane;
+    }
+
+    public static void main(String[] args) {
+        
     }
 
 }
