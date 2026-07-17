@@ -207,9 +207,13 @@ public class PhotoSessionApp extends Application {
                 cbInMotion.isSelected(),
                 tfShotDesc.getText().trim()
             );
-            
 
-        } catch ( e) {
+            log.addSession(ws);
+            clearForm();
+            lblStatus.setText("Session saved! Total sessions: " + log.getTotalSessions());          
+        } 
+        catch (NumberFormatException ex) {
+            lblStatus.setText("Error: Duration and Number sighted must be numeric");
         }
     }
 }
