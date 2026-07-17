@@ -137,5 +137,11 @@ public class PhotoSessionApp extends Application {
         }
     }
 
-    
+    /** Screen: table of all sessions */
+    private BorderPane buildViewAllScreen() {
+        BorderPane pane = new BorderPane();
+        pane.setPadding(new Insets(10));
+        pane.setCenter(tableView);
+        return pane;
+    }
 }
