@@ -152,6 +152,16 @@ public class PhotoSessionApp extends Application {
         grid.setVgap(8);
         grid.setPadding(new Insets(10));
 
-        
+        grid.add(new Label("Date (YYYY-MM-DD):"), 0,0);
+        grid.add(tfDate,                          1,0);
+        grid.add(new Label("Location:"),          0,1);
+        grid.add(tfLocation,                      1,1);
+        grid.add(new Label("Weather:"),           0,2);
+        grid.add(tfWeather,                       1,2);
+        grid.add(new Label("Equipment:"),         0,3);
+        grid.add(tfEquipment,                     1,3);
+        grid.add(new Label("Duration (hours):"),  0,4);
+        grid.add(tfDuration,                      1,4);
+        grid.add(new Label("Species:"), )
     }
 }
