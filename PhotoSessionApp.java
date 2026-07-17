@@ -44,4 +44,19 @@ public class PhotoSessionApp extends Application {
     private CheckBox  cbInMotion    = new CheckBox("Subject was in Motion");
     private TextField tfShotDesc    = new TextField();
     private TextArea  taNotes       = new TextArea();
+
+    // ------ Search field ------
+    private TextField tfSearch      = new TextField();
+
+    @Override
+    public void start(Stage primaryStage) {
+        // ------ Toolbar with Nav buttons ------
+        Button btAdd        = new Button("Add Session");
+        Button btViewAll    = new Button("View All Sessions");
+        Button btSearch     = new Button("Search");
+        Button btStats      = new Button("Statistics");
+
+        HBox
+
+    }
 }
