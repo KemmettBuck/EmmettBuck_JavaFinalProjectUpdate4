@@ -181,4 +181,8 @@ public class SessionLog {
                "\nMost Visited Location:    " + getMostFrequentLocation() +
                "\nMost Photographed Subject:" + getMostFrequentSubject();
     }
+
+    public class void main(String[] args) {
+        launch(args);
+    }
 }
