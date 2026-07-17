@@ -162,6 +162,14 @@ public class PhotoSessionApp extends Application {
         grid.add(tfEquipment,                     1,3);
         grid.add(new Label("Duration (hours):"),  0,4);
         grid.add(tfDuration,                      1,4);
-        grid.add(new Label("Species:"), )
+        grid.add(new Label("Species:"),           0,5);
+        grid.add(tfSpecies,                       1,5);
+        grid.add(new Label("Number sighted:"),    0,6);
+        grid.add(tfNumber,                        1,6);
+        grid.add(cbInMotion,                      1,7);
+        grid.add(new Label("Best shot:"),         0,8);
+        grid.add(tfShotDesc,                      1,8);
+        grid.add(new Label("Notes:"),             0,9);
+        grid.add(taNotes,                         1,9);
     }
 }
