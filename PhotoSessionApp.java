@@ -92,6 +92,11 @@ public class PhotoSessionApp extends Application {
 
         // ------ EVENT 4: Statistics Button ------
         // Display summary statistics
+        btStats.setOnAction(e -> {
+            taOutput.setText(log.toString());
+            root.setCenter(taOutput);
+            lblStatus.setText("Session statistics");
+        });
 
     }
 }
