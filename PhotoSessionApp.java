@@ -171,5 +171,45 @@ public class PhotoSessionApp extends Application {
         grid.add(tfShotDesc,                      1,8);
         grid.add(new Label("Notes:"),             0,9);
         grid.add(taNotes,                         1,9);
+
+        Button btSave = new Button("Save Session");
+        grid.add(btSave, 1, 10);
+
+        // ------ EVENT: Save button with input validation ------
+        btSave.setOnAction(e -> saveSession());
+
+        return grid;
+    }
+
+    /** Validate form and save new WildlifeSession log */
+    private void saveSession() {
+        try {
+            // Error for valid numbers
+            double duration = Double.parseDouble(tfDuration.getText().trim());
+            int number = Integer.parseInt(tfNumber.getText().trim());
+
+            // error for location, can't be blank
+            if (tfLocation.getText().trim().isEmpty()) {
+                lblbStatus.setText("Error: Location required");
+                return;
+            }
+
+            // Create session using Update 3 class
+            WildlifeSession ws = new WildlifeSession(
+                tfDate.getText().trim(),
+                tfLocation.getText().trim(),
+                tfWeather.getText().trim(),
+                tfEquipment.getText().trim(),
+                taNotes.getText().trim(),
+                duration,
+                tfSpecies.getText().trim(),
+                number,
+                cbInMotion.isSelected(),
+                tfShotDesc.getText().trim()
+            );
+            
+
+        } catch ( e) {
+        }
     }
 }
