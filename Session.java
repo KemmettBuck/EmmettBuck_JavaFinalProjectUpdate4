@@ -45,7 +45,7 @@ public abstract class Session {
         this.weather       = weather;
         this.equipmentUsed = equipmentUsed;
         this.sessionNotes  = sessionNotes;
-        setDuration(duration); // utilize setter for validation
+        this.duration      = duration;
     }
 
     // -------------------------
